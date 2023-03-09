@@ -8,7 +8,7 @@
 
 	<form id="user-form">
 		<label for="user-id">Enter user ID:</label>
-		<input type="text" id="user-id" name="user-id">
+		<input type="text" id="username" name="username">
 		<button type="submit">Get User Data</button>
 	</form>
 
@@ -28,10 +28,10 @@
 		form.addEventListener("submit", (event) => {
 			event.preventDefault();
 
-			// const userId = document.getElementById("user-id").value;
-      const userId = document.getElementById("user-id").value;
+			// const userId = document.getElementById("username").value;
+      const username = document.getElementById("username").value;
 
-			fetch("https://sheetdb.io/api/v1/niqgowwro7cea/search?userid=" + userId)
+			fetch("https://sheetdb.io/api/v1/niqgowwro7cea/search?username=" + username)
 				.then(response => response.json())
 				.then(data => {
 					if (data.length > 0) {
